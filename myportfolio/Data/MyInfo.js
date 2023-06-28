@@ -9,6 +9,27 @@ import cetificate2 from '../src/assets/educationItFromScrach.PNG'
 import cetificate3 from '../src/assets/chicasDigitales2.PNG'
 import cetificate4 from '../src/assets/chicasDigitales1.PNG'
 
+import icon1 from '../src/assets/react-color.svg'
+import icon2 from '../src/assets/javascript-color.svg'
+import icon3 from '../src/assets/phyton-color.svg'
+import icon4 from '../src/assets/nodedotjs-color.svg'
+import icon5 from '../src/assets/redux-color.svg'
+import icon6 from '../src/assets/express-color.svg'
+import icon7 from '../src/assets/postgresql-color.svg'
+import icon8 from '../src/assets/mysql-color.svg'
+import icon9 from '../src/assets/sequelize-color.svg'
+import icon10 from '../src/assets/html5-color.svg'
+import icon11 from '../src/assets/css3-color.svg'
+import icon12 from '../src/assets/tailwindcss-color.svg'
+import icon13 from '../src/assets/railway-color.svg'
+import icon14 from '../src/assets/vercel-color.svg'
+import icon15 from '../src/assets/netlify-color.svg'
+import icon16 from '../src/assets/git-color.svg'
+import icon17 from '../src/assets/github-color.svg'
+import icon18 from '../src/assets/visualstudiocode-color.svg'
+import icon19 from '../src/assets/figma-color.svg'
+import icon20 from '../src/assets/jira-color.svg'
+
 export const info = {
     Español: [
         {   
@@ -40,24 +61,68 @@ export const info = {
             ]
         },{   
             id:3,
-            title: "Tecnologías",
+            title:"Tecnologías",
             tecnologies: [
                 {   
-                    id:1,
-                    title:"JavaScript Avanzado",
-                    certificate:cetificate1
+                    title:"React",
+                    icon: icon1
                 },{   
-                    id:2,
-                    title:"JavaScript desde Cero",
-                    certificate:cetificate2
+                    title:"JavaScript",
+                    icon: icon2
                 },{   
-                    id:3,
-                    title:"Introducción a la Programación parte 2",
-                    certificate:cetificate3
+                    title:"Phyton",
+                    icon: icon3
                 },{   
-                    id:4,
-                    title:"Introducción a la Programación parte 1",
-                    certificate:cetificate4
+                    title:"Node.js",
+                    icon: icon4
+                },{   
+                    title:"Redux",
+                    icon: icon5
+                },{   
+                    title:"Express",
+                    icon: icon6
+                },{   
+                    title:"PostgreSQL",
+                    icon: icon7
+                },{   
+                    title:"MySQL",
+                    icon: icon8
+                },{   
+                    title:"Sequelize",
+                    icon: icon9
+                },{   
+                    title:"HTML",
+                    icon: icon10
+                },{   
+                    title:"CSS",
+                    icon: icon11
+                },{   
+                    title:"Tailwind CSS",
+                    icon: icon12
+                },{   
+                    title:"Railway",
+                    icon: icon13
+                },{   
+                    title:"Vercel",
+                    icon: icon14
+                },{   
+                    title:"Netlify",
+                    icon: icon15
+                },{   
+                    title:"Git",
+                    icon: icon16
+                },{   
+                    title:"Github",
+                    icon: icon17
+                },{   
+                    title:"Visual Studio Code",
+                    icon: icon18
+                },{   
+                    title:"Figma",
+                    icon: icon19
+                },{   
+                    title:"Jira",
+                    icon: icon20
                 }
             ]
         },{   
@@ -137,6 +202,72 @@ export const info = {
             ]
         },{   
             id:3,
+            title:"Technologies",
+            tecnologies: [
+                {   
+                    title:"React",
+                    icon: icon1
+                },{   
+                    title:"JavaScript",
+                    icon: icon2
+                },{   
+                    title:"Phyton",
+                    icon: icon3
+                },{   
+                    title:"Node.js",
+                    icon: icon4
+                },{   
+                    title:"Redux",
+                    icon: icon5
+                },{   
+                    title:"Express",
+                    icon: icon6
+                },{   
+                    title:"PostgreSQL",
+                    icon: icon7
+                },{   
+                    title:"MySQL",
+                    icon: icon8
+                },{   
+                    title:"Sequelize",
+                    icon: icon9
+                },{   
+                    title:"HTML",
+                    icon: icon10
+                },{   
+                    title:"CSS",
+                    icon: icon11
+                },{   
+                    title:"Tailwind CSS",
+                    icon: icon12
+                },{   
+                    title:"Railway",
+                    icon: icon13
+                },{   
+                    title:"Vercel",
+                    icon: icon14
+                },{   
+                    title:"Netlify",
+                    icon: icon15
+                },{   
+                    title:"Git",
+                    icon: icon16
+                },{   
+                    title:"Github",
+                    icon: icon17
+                },{   
+                    title:"Visual Studio Code",
+                    icon: icon18
+                },{   
+                    title:"Figma",
+                    icon: icon19
+                },{   
+                    title:"Jira",
+                    icon: icon20
+                }
+            ]
+        },{   
+            id:4,
             title: "Education",
             education: [
                 {   
@@ -158,12 +289,12 @@ export const info = {
                 }
             ]
         },{   
-            id:4,
+            id:5,
             title: "About me",
             desc: "Hi, I'm Katherine Contreras . I'm from Venezuela and I currently live in Argentina, my native language is Spanish but I have an advanced level in English and I am currently studying French from scratch . I started programming thanks to the pandemic and because I wanted to learn something new. once i started there was no going back 😍 . One of the things I loved about programming was how much I could learn to do with it, and the fact that it always keep changing and improving so there was always something new to learn every day. But what I liked the most it's that the only thing we need for it, its a computer or laptop and good internet👌 . Now, after three years of studying and practicing I consider myself ready to start looking for job opportunities as a programmer in companies or startups. My value proposition lies in my way to adapt to any situations, which makes my projects as a programmer easier to do💡 . So, I invite you to contact me if your interested to gain someone like me !!",
             idiomas : [{title:"Spanish",nivel:"Native"},{title:"English",nivel:"Advanced",certificado:"https://www.efset.org/cert/Q2wtTu"},{title:"French",nivel:"Basic"}]
         },{   
-            id:5,
+            id:6,
             title: "Contact me",
             contacts : [
                 {
