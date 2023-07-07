@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-
+import { Reveal } from './Reveal'
+import { Appear } from './Appear'
 export default function Education({info}) {
     
     const [showInfo,setShowInfo] = useState(null)
@@ -15,8 +16,10 @@ export default function Education({info}) {
         setImage(null)
     } 
   return (
-    <div className='w-full'>
+    <div id={`${info.id}`} className='w-full -mb-20'>
+        <Reveal>
         <h1 className='font-bold md:text-5xl text-2xl mt-16 ml-10 md:ml-44'>{info.Title}</h1>
+        </Reveal>
         <div className='w-full md:mt-16 mt-5'>
             {info.info.map((edu,i)=>{
                 let selected = false 
@@ -28,7 +31,8 @@ export default function Education({info}) {
                     imgOpen = true
                 }
                 return(
-                    <div>
+                    <div key={i}>
+                        <Appear>
                         <div 
                             onMouseEnter={()=>handleInfo(edu.name)} 
                             onMouseLeave={()=>handleInfo(null)} 
@@ -42,6 +46,7 @@ export default function Education({info}) {
                                 <p className='md:text-xl text-base mt-5'>{edu.desc}</p>
                             </div>
                         </div>
+                        </Appear>
                         {imgOpen === true ? (
                             <div className='fixed left-0 right-0 top-0 bottom-0 md:py-32 py-44 bg-slate-950 h-screen w-full flex justify-center align-middle z-50'>
                                 <p onClick={closeimg} className='md:text-5xl text-3xl absolute top-3 right-5 md:right-10'>x</p>
@@ -49,7 +54,6 @@ export default function Education({info}) {
                             </div>
                         ): null}
                     </div>
-                    
                 )
             })}
         </div>

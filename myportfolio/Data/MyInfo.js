@@ -31,15 +31,24 @@ import icon20 from '../src/assets/jira-color.svg'
 export const info = {
     Spanish:{
         nav:{
-            items:['Home',"Sobre Mi","Habilidades","Proyectos","Educación","Contacto"],
+            items:[
+                {name:'Home',id:"/"},
+                {name:'Sobre Mi',id:"about"},
+                {name:'Habilidades',id:"skills"},
+                {name:'Proyectos',id:"projects"},
+                {name:'Educación',id:"education"},
+                {name:'Contacto',id:"contact"}
+            ],
             language: "Spanish"
         },
         Home:{
+            id:"/",
             text:"Hola, Mi Nombre es",
             name:"Katherine Contreras",
             position:"Desarrolladora Full Stack"
         },
         About:{
+            id:"about",
             text:"Sobre Mi",
             Title:"Quien Soy",
             desc1:"Comencé a programar gracias a la pandemia y porque quería aprender algo nuevo. Una vez que comencé, no había vuelta atrás 😍.",
@@ -47,6 +56,7 @@ export const info = {
             botons:['Contacto','Descargar CV']
         },
         Skills:{
+            id:"skills",
             title:"Mis Habilidades",
             items:[
                 {
@@ -133,6 +143,7 @@ export const info = {
             ]
         },
         Projects:{
+            id:"projects",
             Title:"Mis Proyectos",
             More: "Visitar Pagina",
             projects: [
@@ -150,6 +161,7 @@ export const info = {
             ]
         },
         Education:{
+            id:"education",
             Title:"Educación",
             Certificate: "Ver Certificado",
             info: [
@@ -182,6 +194,7 @@ export const info = {
             ]
         },
         Contact:{
+            id:"contact",
             title:"Contacta Me",
             full:["Position de Trabajo","Descripcion"],
             send:"enviar" , 
@@ -190,15 +203,24 @@ export const info = {
     },
     English:{
         nav:{
-            items:['Home',"About","Skills","Projects","Education","Contact"],
+            items:[
+                {name:'Home',id:"/"},
+                {name:'About',id:"about"},
+                {name:'Skills',id:"skills"},
+                {name:'Projects',id:"projects"},
+                {name:'Education',id:"education"},
+                {name:'Contact',id:"contact"}
+            ],
             language: "English"
         },
         Home:{
+            id:"/",
             text:"Hi!! My Name is",
             name:"Katherine Contreras",
             position:"Full Stack Developer"
         },
         About:{
+            id:"about",
             text:"About me",
             Title:"Who Am I ",
             desc1:"I started programming thanks to the pandemic and because I wanted to learn something new. once i started there was no going back 😍 .",
@@ -206,6 +228,7 @@ export const info = {
             botons:['Contact','Dowload Cv']
         },
         Skills:{
+            id:"skills",
             title:"My Skills",
             items:[
                 {
@@ -292,6 +315,7 @@ export const info = {
             ]
         },
         Projects:{
+            id:"projects",
             Title:"My Projects",
             More: "Visit Page",
             projects: [
@@ -309,6 +333,7 @@ export const info = {
             ]
         },
         Education:{
+            id:"education",
             Title:"Educaction",
             Certificate: "View Certificate",
             info: [
@@ -341,6 +366,7 @@ export const info = {
             ]
         },
         Contact:{
+            id:"contact",
             title:"Contact Me",
             full:["Job Position","Description"],
             send:"send", 

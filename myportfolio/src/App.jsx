@@ -28,7 +28,6 @@ function App() {
     <main className='bg-[#110E2F] text-slate-300 h-full w-full m-0 p-0'>
       <Nav changeLanguage={changeLanguage} info={data.nav} />
       <Home info={data.Home}/>
-      <div className='h-96 w-full'></div>
       <About info={data.About}/>
       <Skills info={data.Skills} />
       <Projects info={data.Projects}/>

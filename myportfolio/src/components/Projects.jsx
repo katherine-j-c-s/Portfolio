@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import ReactPlayer from 'react-player'
 import ReactCardFlip from 'react-card-flip'
+import { Appear } from './Appear';
+import { Reveal } from './Reveal';
 //import ReactCardFlip from 'react-card-flip';
 
 export default function Projects({info}) {
@@ -18,12 +20,13 @@ export default function Projects({info}) {
         }
     }
   return (
-    <div className='w-full bg-black py-10 h-fit relative md:mt-32 mt-10'>
-        {console.log(info)}
+    <div id={`${info.id}`} className='w-full bg-black py-10 h-fit relative md:mt-32 mt-10'>
+        <Reveal>
         <div className='md:w-fit md:ml-52 md:text-left text-center '>
             <h1 className='font-bold md:text-5xl text-3xl'>{info.Title}</h1>
             <div className='bg-[#DA0BFF] h-1 md:w-96 w-44 mt-6 md:mx-0 mx-auto'></div>
         </div>
+        </Reveal>
         <div className='flex md:flex-row flex-col w-full md:justify-evenly justify-center'>
             {info.projects.map((pr,i)=>{
                 let selected = false
@@ -31,7 +34,8 @@ export default function Projects({info}) {
                     selected = true
                 }
                 return(
-                    <div className='text-center'>
+                    <div key={i} className='text-center'>
+                        <Appear>
                         <div className="relative md:mt-32 mt-12 md:w-fit w-full mx-auto">
                             <ReactCardFlip isFlipped={selected} flipDirection="horizontal">
                                 <div className="rounded-3xl md:shadow-[#DA0BFF] shadow-lg bg-[#110E2F] mx-auto md:mx-0 md:w-80 w-10/12 md:pt-52 pt-52 md:pb-12 pb-5" onMouseEnter={()=>handleFlip(i)} onClick={()=>handleFlip(i)}>
@@ -53,6 +57,7 @@ export default function Projects({info}) {
                                 {info.More}
                             </p>
                         </div>
+                        </Appear>
                     </div>
             )})}
         </div>
