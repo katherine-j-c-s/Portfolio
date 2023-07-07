@@ -8,7 +8,7 @@ export default function About({info}) {
   return (
     <div className='flex w-full md:bg-transparent bg-[#110E2F] md:pt-6 -mt-16 relative z-10 md:flex-row flex-col-reverse justify-center'>
         <div className='md:w-2/4 top-5 relative md:top-0 md:right-0 right-0 w-full flex md:justify-end md:pr-44'>
-            <img className='absolute top-6 left-16 mx-auto md:w-fit w-44' src={elipse} alt="backimg" />
+            <img className='absolute top-6 md:left-52 left-16 mx-auto md:w-fit w-44' src={elipse} alt="backimg" />
             <img className='relative mx-auto md:mx-0 md:w-fit w-44' src={KateAbout} alt="img" />
         </div>
         <div className='flex flex-col justify-start mt-10 md:w-2/4 w-full'>
