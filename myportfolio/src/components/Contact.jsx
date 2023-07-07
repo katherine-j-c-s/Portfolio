@@ -71,7 +71,7 @@ export default function Contact({info}) {
   return (
     <div className='w-full h-fit relative z-30 mt-32 flex md:flex-row flex-col-reverse justify-center'>
       <div className='bg-gradient-to-r absolute from-[#141414] via-[#332836] to-[#DA0BFF] h-full w-full opacity-50'></div>
-      <div className='md:w-fit w-10/12 md:mt-0 mt-5 md:mx-0 mx-auto md:mr-44 flex md:flex-col flex-col-reverse my-16 relative z-30'>
+      <div className='md:w-fit w-10/12 md:mt-12 mt-5 md:mx-0 mx-auto md:mr-44 flex md:flex-col flex-col-reverse my-16 relative z-30'>
         <img src={img} alt="img" />
         <div className='flex w-8/12 md:mb-0 mb-10 md:mx-0 justify-evenly mt-3'>
           <div className='w-fit hover:bg-[#DA0BFF] bg-[#DA0BFF] transition-all cursor-pointer h-fit p-2 rounded-full md:bg-[#D9D9D9] '>
