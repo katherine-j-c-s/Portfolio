@@ -5,7 +5,7 @@ import cetificate0 from '../src/assets/CertificateHenry.png'
 import cetificate1 from '../src/assets/educationitAdvanced.png'
 import cetificate2 from '../src/assets/EducationItFromScrach.png'
 import cetificate3 from '../src/assets/ChicasDigitalersSecond.png'
-import cetificate4 from '../src/assets/chicasDigitales1.png'
+import cetificate4 from '../src/assets/ChicasDigitalersFirst.png'
 
 import icon1 from '../src/assets/react-color.svg'
 import icon2 from '../src/assets/javascript-color.svg'
