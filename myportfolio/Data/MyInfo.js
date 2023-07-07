@@ -1,6 +1,7 @@
 import project1 from '../src/assets/fitness.png'
 import project2 from '../src/assets/gamepad.png'
 
+import cetificate0 from '../src/assets/CertificateHenry.png'
 import cetificate1 from '../src/assets/educationitAdvanced.png'
 import cetificate2 from '../src/assets/edicationItFromScrach.png'
 import cetificate3 from '../src/assets/chicasDigitales2.png'
@@ -42,7 +43,7 @@ export const info = {
             text:"Sobre Mi",
             Title:"Quien Soy",
             desc1:"Comencé a programar gracias a la pandemia y porque quería aprender algo nuevo. Una vez que comencé, no había vuelta atrás 😍.",
-            desc1:"Una de las cosas que me encantó de programar fue la cantidad de cosas que podía aprender a hacer con ello, y el hecho de que siempre está cambiando y mejorando, por lo que siempre hay algo nuevo que aprender cada día💪.",
+            desc2:"Una de las cosas que me encantó de programar fue la cantidad de cosas que podía aprender a hacer con ello, y el hecho de que siempre está cambiando y mejorando, por lo que siempre hay algo nuevo que aprender cada día💪.",
             botons:['Contacto','Descargar CV']
         },
         Skills:{
@@ -133,6 +134,7 @@ export const info = {
         },
         Projects:{
             Title:"Mis Proyectos",
+            More: "Visitar Pagina",
             projects: [
                 {
                     title: "SportWear",
@@ -143,18 +145,19 @@ export const info = {
                     title: "Videogames",
                     icon: project2,
                     youtubeVideo:"https://www.youtube.com/watch?v=-IIMIRXiVP4&t=80s",
-                    link:"https://github.com/katherine-j-c-s/PI_VideoGames",
+                    link:"https://pi-video-games-seven.vercel.app/",
                 }
             ]
         },
         Education:{
             Title:"Educación",
+            Certificate: "Ver Certificado",
             info: [
                 {
                     name: "Desarrrolladora Full Stack",
                     academy:"Soy Henry",
                     desc: "Un Curso en línea intensivo que simula un entorno laboral real y te prepara para una exitosa carrera como desarrollador Full Stack.",
-                    certificate: "https://certificates.soyhenry.com/new-cert?id=c80f9586d8d0c68c2b01348ab406d4f3ae24bcfb41658742a93a29e6f64b8d72"
+                    certificate: cetificate0
                 },{
                     name: "JavaScript Avanzado",
                     academy:"Educacion It",
@@ -181,7 +184,8 @@ export const info = {
         Contact:{
             title:"Contacta Me",
             full:["Position de Trabajo","Descripcion"],
-            send:"enviar" 
+            send:"enviar" , 
+            language:"Spanish"
         }
     },
     English:{
@@ -289,6 +293,7 @@ export const info = {
         },
         Projects:{
             Title:"My Projects",
+            More: "Visit Page",
             projects: [
                 {
                     title: "SportWear",
@@ -299,18 +304,19 @@ export const info = {
                     title: "Videogames",
                     icon: project2,
                     youtubeVideo:"https://www.youtube.com/watch?v=-IIMIRXiVP4&t=80s",
-                    link:"https://github.com/katherine-j-c-s/PI_VideoGames",
+                    link:"https://pi-video-games-seven.vercel.app/",
                 }
             ]
         },
         Education:{
             Title:"Educaction",
+            Certificate: "View Certificate",
             info: [
                 {
                     name: "Full Stack Developer",
                     academy:"Soy Henry",
                     desc: "An intensive online program that simulates a real work environment and prepares you for a successful career as a Full Stack developer.",
-                    certificate: "https://certificates.soyhenry.com/new-cert?id=c80f9586d8d0c68c2b01348ab406d4f3ae24bcfb41658742a93a29e6f64b8d72"
+                    certificate: cetificate0
                 },{
                     name: "Advanced JavaScript",
                     academy:"Educacion It",
@@ -337,7 +343,8 @@ export const info = {
         Contact:{
             title:"Contact Me",
             full:["Job Position","Description"],
-            send:"send" 
+            send:"send", 
+            language:"English"
         }
     },
 }

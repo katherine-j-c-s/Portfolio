@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Typewriter from "typewriter-effect";
 import Kate from '../assets/KateHome.png'
 import icon1 from '../assets/gmail.png'
@@ -6,8 +6,12 @@ import icon2 from '../assets/linkedin.png'
 import icon3 from '../assets/github.png'
 
 export default function Home({info}) {
+  const [text,setText] = useState()
+  useEffect(()=>{
+    setText(info.text)
+  },[info])
   return (
-    <div className=' z-10 relative h-80'>
+    <div className=' z-10 w-full relative h-80'>
         <div className='bg-gradient-to-r absolute from-[#141414] via-[#332836] to-[#DA0BFF] h-full w-full opacity-50'></div>
         <div className='relative h-80 w-full z-10'>
           <div className='bg-gradient-to-r top-80 absolute from-[#141414] via-[#332836] to-[#DA0BFF] h-full w-full opacity-50'></div>
@@ -16,7 +20,7 @@ export default function Home({info}) {
           <div className='relative z-20 -mt-40'>
             <div className='md:text-2xl text-xl mb-4 ml-1'>
               <Typewriter onInit={(typewriter)=> {
-                typewriter.typeString(`${info.text}`)
+                typewriter.typeString(`${text}`)
                 .start();
                 }}
               />

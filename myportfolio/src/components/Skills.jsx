@@ -14,7 +14,7 @@ export default function Skills({info}) {
         })
     }
   return (
-    <div className='w-full pt-8'>
+    <div className='w-full md:pt-8'>
         <div className='md:shadow-[#DA0BFF] md:shadow-xl rounded-3xl py-8 mt-10 h-fit mx-auto w-full md:w-10/12 '>
             <div className='w-fit md:mx-0 mx-auto text-center md:text-left md:ml-10 mb-10'>
                 <h1 className='text-2xl md:text-5xl font-bold'>{info.title}</h1>
