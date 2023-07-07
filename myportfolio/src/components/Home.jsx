@@ -18,16 +18,16 @@ export default function Home({info}) {
         <div className='md:flex h-fit pt-24  align-bottom md:flex-row flex-col justify-center text-center md:text-justify w-full relative'>
           <div className='relative w-full md:w-fit mt-10 md:mt-52 z-20 h-fit'>
             <Reveal> 
-              <p className='md:text-2xl text-xl mb-4 ml-20 md:ml-1'>{text}</p>
+              <p className='md:text-2xl text-xl mb-4 ml-10 md:ml-1'>{text}</p>
             </Reveal>
             <Reveal>
-              <h1 className='md:text-6xl text-3xl md:ml-0 ml-3 font-bold'>{info.name}</h1>
+              <h1 className='md:text-6xl text-3xl md:ml-0 ml-10 font-bold'>{info.name}</h1>
             </Reveal>
             <Reveal> 
-              <h2 className='md:text-3xl text-2xl md:ml-1 ml-8 mt-8 font-bold'>{info.position}</h2>
+              <h2 className='md:text-3xl text-2xl md:ml-1 ml-10 mt-8 font-bold'>{info.position}</h2>
             </Reveal>
             <Reveal> 
-              <div className='bg-[#DA0BFF] h-1 w-52 ml-11 md:mx-0 mx-auto md:ml-1 mt-3'></div>
+              <div className='bg-[#DA0BFF] h-1 w-52 ml-10 md:mx-0 mx-auto md:ml-1 mt-3'></div>
             </Reveal>
             <Reveal> 
               <div className='flex md:w-52 w-full md:mx-0 ml-12 justify-evenly mt-3'>
