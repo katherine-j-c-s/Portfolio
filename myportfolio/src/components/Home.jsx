@@ -11,6 +11,27 @@ export default function Home({info}) {
   useEffect(()=>{
     setText(info.text)
   },[info])
+
+  const handleOpenLink = (link) => {
+    if (link === "G") {
+      window.open(Github, '_blank');
+    }else{
+      window.open(linkedIn, '_blank');
+    }
+  };
+
+  const handleOpenGmail = () => {
+    const emailAddress = 'kathijcs@gmail.com';
+
+    const mailtoLink = `mailto:${emailAddress}`;
+
+    window.location.href = mailtoLink;
+  };
+
+  const linkedIn = 'https://www.linkedin.com/in/katherine-contreras/';
+  const Github = 'https://github.com/katherine-j-c-s'; 
+
+
   return (
     <div id={`${info.id}`} className='w-full h-fit relative'>
       <ScrollRight>
@@ -40,13 +61,13 @@ export default function Home({info}) {
             <div className='mx-auto md:mx-0'>
               <Reveal> 
                 <div className='flex md:w-52 w-full md:mx-0 ml-0 justify-evenly mt-3'>
-                  <div className='w-fit cursor-pointer h-fit p-2 rounded-full bg-[#DA0BFF] '>
+                  <div onClick={handleOpenGmail} className='w-fit cursor-pointer h-fit p-2 rounded-full bg-[#DA0BFF] '>
                     <img className='h-8 w-8' src={icon1} alt="mail" />
                   </div>
-                  <div className='w-fit cursor-pointer mx-2 h-fit p-2 rounded-full bg-[#DA0BFF] '>
+                  <div onClick={()=>handleOpenLink('L')} className='w-fit cursor-pointer mx-2 h-fit p-2 rounded-full bg-[#DA0BFF] '>
                     <img className='h-8 w-8' src={icon2} alt="mail" />
                   </div>
-                  <div className='w-fit cursor-pointer h-fit p-2 rounded-full bg-[#DA0BFF] '>
+                  <div onClick={()=>handleOpenLink('G')} className='w-fit cursor-pointer h-fit p-2 rounded-full bg-[#DA0BFF] '>
                     <img className='h-8 w-8' src={icon3} alt="mail" />
                   </div>
                 </div>

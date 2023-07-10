@@ -18,6 +18,14 @@ export default function Nav({changeLanguage,info}) {
         }
     }
     
+    const showLangueje = () => {
+        if (showlang === false) {
+            setShowNav(true)
+        }else{
+            setShowNav(false)
+        }
+    }
+    
     const language = () => {
         if (info.language === "English") {
             changeLanguage("Spanish")
@@ -58,7 +66,7 @@ export default function Nav({changeLanguage,info}) {
             </div>
             <div className='relative md:mt-5 mt-6 md:ml-0 -ml-16 flex justify-end w-32 z-40'>
                 <div className='z-40 md:bg-transparent md:hover:bg-[#D9D9D9] transition-all md:hover:p-1 bg-[#D9D9D9] md:p-0 p-1 rounded-full cursor-pointer relative'>
-                    <img onClick={()=> setShowLang(!showlang)} src={iconLanguage} className='h-8 w-8 ' alt="img" />
+                    <img onClick={showLangueje} src={iconLanguage} className='h-8 w-8 ' alt="img" />
                 </div>
                 <div className={`absolute cursor-pointer transition-all py-2 px-4 rounded-full z-0 top-0 ${showlang === false ? 'translate-y-0 opacity-0' : 'translate-y-20'} ${showNav === true ? ' translate-x-10 bg-white text-black' : 'bg-[#110E2F] translate-x-0'}`}>
                     <p onClick={language}>{info.language === "English" ? "Spanish" : "Inglés"}</p>
