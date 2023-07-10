@@ -19,11 +19,12 @@ export default function Nav({changeLanguage,info}) {
     }
     
     const language = () => {
-        console.log(info);
         if (info.language === "English") {
             changeLanguage("Spanish")
+            setShowLang(false)
         }else if (info.language === "Spanish") {
             changeLanguage("English")
+            setShowLang(false)
         }
     }
   return (

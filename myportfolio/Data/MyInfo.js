@@ -1,6 +1,9 @@
 import project1 from '../src/assets/fitness.png'
 import project2 from '../src/assets/gamepad.png'
 
+import cvEnglish from '../src/assets/cvEnglish.pdf'
+import cvSpanish from '../src/assets/cvEspañol.pdf'
+
 import cetificate0 from '../src/assets/CertificateHenry.png'
 import cetificate1 from '../src/assets/educationitAdvanced.png'
 import cetificate2 from '../src/assets/EducationItFromScrach.png'
@@ -53,7 +56,9 @@ export const info = {
             Title:"Quien Soy",
             desc1:"Comencé a programar gracias a la pandemia y porque quería aprender algo nuevo. Una vez que comencé, no había vuelta atrás 😍.",
             desc2:"Una de las cosas que me encantó de programar fue la cantidad de cosas que podía aprender a hacer con ello, y el hecho de que siempre está cambiando y mejorando, por lo que siempre hay algo nuevo que aprender cada día💪.",
-            botons:['Contacto','Descargar CV']
+            botons:['Contacto','Descargar CV'],
+            cv: cvSpanish,
+            pathName: "cvEspañol"
         },
         Skills:{
             id:"skills",
@@ -196,6 +201,7 @@ export const info = {
         Contact:{
             id:"contact",
             title:"Contacta Me",
+            text: "Mandame un Email para conectar! Y si lo prefieres, tambien me puedes encontrar en...",
             full:["Position de Trabajo","Descripcion"],
             send:"enviar" , 
             language:"Spanish"
@@ -225,7 +231,9 @@ export const info = {
             Title:"Who Am I ",
             desc1:"I started programming thanks to the pandemic and because I wanted to learn something new. once i started there was no going back 😍 .",
             desc2:"One of the things I loved about programming was how much I could learn to do with it, and the fact that it always keep changing and improving so there was always something new to learn every day💪",
-            botons:['Contact','Dowload Cv']
+            botons:['Contact','Dowload Cv'],
+            cv: cvEnglish,
+            pathName: "cvEnglish"
         },
         Skills:{
             id:"skills",
@@ -368,6 +376,7 @@ export const info = {
         Contact:{
             id:"contact",
             title:"Contact Me",
+            text: "Shoot me an email if you want to connect! You can also find me on ...",
             full:["Job Position","Description"],
             send:"send", 
             language:"English"

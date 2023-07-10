@@ -70,6 +70,24 @@ export default function Contact({info}) {
       console.log(errors);
     }
   }
+  const handleOpenGmail = () => {
+    const emailAddress = 'kathijcs@gmail.com';
+
+    const mailtoLink = `mailto:${emailAddress}`;
+
+    window.location.href = mailtoLink;
+  };
+
+  const linkedIn = 'https://www.linkedin.com/in/katherine-contreras/';
+  const Github = 'https://github.com/katherine-j-c-s'; 
+
+  const handleOpenLink = (link) => {
+    if (link === "G") {
+      window.open(Github, '_blank');
+    }else{
+      window.open(linkedIn, '_blank');
+    }
+  };
   return (
     <ScrollRight>
     <div id={`${info.id}`} className='w-full h-fit relative mt-32 flex md:flex-row flex-col-reverse justify-center'>
@@ -77,27 +95,37 @@ export default function Contact({info}) {
       <div className='md:w-fit w-10/12 md:mt-12 mt-10 md:mx-0 mx-auto md:mr-44 flex md:flex-col flex-col-reverse md:my-16 relative z-30'>
         <Appear>
         <img src={img} alt="img" />
-        <div className='flex w-8/12 md:mb-0 mb-10 md:mx-0 justify-evenly mt-3'>
-          <div className='w-fit hover:bg-[#DA0BFF] bg-[#DA0BFF] transition-all cursor-pointer h-fit p-2 rounded-full md:bg-[#D9D9D9] '>
-            <img className='h-8 w-8' src={icon1} alt="mail" />
-          </div>
-          <div className='w-fit hover:bg-[#DA0BFF] bg-[#DA0BFF] transition-all cursor-pointer h-fit p-2 rounded-full md:bg-[#D9D9D9] '>
-            <img className='h-8 w-8' src={icon2} alt="mail" />
-          </div>
-          <div className='w-fit hover:bg-[#DA0BFF] bg-[#DA0BFF] transition-all cursor-pointer h-fit p-2 rounded-full md:bg-[#D9D9D9] '>
-            <img className='h-8 w-8' src={icon3} alt="mail" />
-          </div>
-        </div>
         </Appear>
       </div>
-      <div className='text-base mt-16 relative z-30 font-thin mx-auto md:mx-0 w-10/12 md:w-96'>
-        <Reveal>
-        <div className='w-fit'>
-          <h1 className='font-bold md:text-5xl text-3xl mx-5'>{info.title}</h1>
-          <div className='bg-[#DA0BFF] h-1 w-full md:mx-0 mx-auto md:ml-1 mt-3'></div>
+      <div className='text-base mt-32 relative z-30 font-thin mx-auto md:mx-0 w-10/12 md:w-4/12'>
+        <div className='mx-auto w-fit mb-10'>
+          <Reveal>
+          <div className='w-fit'>
+            <h1 className='font-bold md:text-5xl text-3xl mx-5'>{info.title}</h1>
+            <div className='bg-[#DA0BFF] h-1 w-full md:mx-0 mx-auto md:ml-1 mt-3'></div>
+          </div>
+          </Reveal>
         </div>
-        </Reveal>
-        <form onSubmit={handleSubmit} className='mt-5'>
+        
+        <div className='text-center'>
+          <Appear>
+          <p className='font-mono md:text-xl text-base mb-5'>{info.text}</p>
+          </Appear>
+          <Appear>
+          <div className='flex w-8/12 md:mb-0 mb-10 md:mx-auto justify-evenly mt-3'>
+            <div onClick={handleOpenGmail} className='w-fit bg-[#DA0BFF] hover:-translate-y-3 transition-all cursor-pointer h-fit p-2 rounded-full '>
+              <img className='h-8 w-8' src={icon1} alt="mail" />
+            </div>
+            <div onClick={()=>handleOpenLink('L')} className='w-fit bg-[#DA0BFF] hover:-translate-y-3 transition-all cursor-pointer h-fit p-2 rounded-full '>
+              <img className='h-8 w-8' src={icon2} alt="mail" />
+            </div>
+            <div onClick={()=>handleOpenLink('G')} className='w-fit bg-[#DA0BFF] hover:-translate-y-3 transition-all cursor-pointer h-fit p-2 rounded-full '>
+              <img className='h-8 w-8' src={icon3} alt="mail" />
+            </div>
+          </div>
+          </Appear>
+        </div>
+        {/* <form onSubmit={handleSubmit} className='mt-5'>
           <div>
             <Appear>
             <label className={`
@@ -172,7 +200,7 @@ export default function Contact({info}) {
               {info.send}
           </button>
           </Reveal>
-        </form>
+        </form> */}
       </div>
     </div>
     </ScrollRight>

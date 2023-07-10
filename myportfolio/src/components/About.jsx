@@ -7,6 +7,29 @@ import btn2 from '../assets/dowloadbtn.png'
 import { Appear } from './Appear'
 
 export default function About({info}) {
+
+    const handleOpenGmail = () => {
+        const emailAddress = 'kathijcs@gmail.com';
+    
+        const mailtoLink = `mailto:${emailAddress}`;
+    
+        window.location.href = mailtoLink;
+    };
+
+    const handleDownload = (path,pathName) => {
+        const fileUrl = path; // Replace with the actual file URL or path
+    
+        const link = document.createElement('a');
+        link.href = fileUrl;
+        link.download = `${pathName}.pdf`; // Replace with the desired file name
+        link.target = '_blank';
+    
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    };
+
+    console.log(info);
   return (
     <div  id={`${info.id}`} className='flex w-full md:bg-transparent bg-[#110E2F] md:pt-16 relative md:flex-row flex-col-reverse justify-center'>
         <div className='md:w-2/4 top-0 relative md:-top-10 md:right-0 right-0 w-full flex md:justify-end md:pr-44'>
@@ -33,13 +56,13 @@ export default function About({info}) {
                 </Appear>
                 <div className='flex mt-5'>
                     <Reveal>
-                    <div className='flex mr-5 md:w-fit p-2 border border-[#DA0BFF] transition-all hover:bg-[#DA0BFF] hover:-translate-y-2 justify-evenly rounded-md'>
+                    <div onClick={handleOpenGmail} className='flex mr-5 md:w-fit p-2 cursor-pointer border border-[#DA0BFF] transition-all hover:bg-[#DA0BFF] hover:-translate-y-2 justify-evenly rounded-md'>
                         <p className='md:text-xl mr-2 w-fit text-base font-mono'>{info.botons[0]}</p>
                         <img src={btn1} className='h-5 w-5 mt-1' alt="btn"/>
                     </div>
                     </Reveal>
                     <Reveal>
-                    <div className='flex md:w-fit p-2 border border-[#DA0BFF] bg-[#DA0BFF] hover:-translate-y-2 transition-all justify-evenly rounded-md'>
+                    <div onClick={()=>handleDownload(info.cv,info.pathName)} className='flex cursor-pointer md:w-fit p-2 border border-[#DA0BFF] bg-[#DA0BFF] hover:-translate-y-2 transition-all justify-evenly rounded-md'>
                         <p className='md:text-xl mr-2 text-base font-mono'>{info.botons[1]}</p>
                         <img src={btn2} className='h-5 w-5 mt-1' alt="btn"/>
                     </div>
