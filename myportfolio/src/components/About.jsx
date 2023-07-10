@@ -8,13 +8,12 @@ import { Appear } from './Appear'
 
 export default function About({info}) {
   return (
-    <div  id={`${info.id}`} className='flex w-full md:bg-transparent bg-[#110E2F] md:pt-6 relative md:flex-row flex-col-reverse justify-center'>
-        <div className='md:w-2/4 top-5 relative md:top-0 md:right-0 right-0 w-full flex md:justify-end md:pr-44'>
-            <img className='absolute top-6 md:left-52 left-16 mx-auto md:w-fit w-44' src={elipse} alt="backimg" />
-            <img className='relative mx-auto md:mx-0 md:w-fit w-44' src={KateAbout} alt="img" />
+    <div  id={`${info.id}`} className='flex w-full md:bg-transparent bg-[#110E2F] md:pt-16 relative md:flex-row flex-col-reverse justify-center'>
+        <div className='md:w-2/4 top-0 relative md:-top-10 md:right-0 right-0 w-full flex md:justify-end md:pr-44'>
+            <img className='absolute left-6 top-10 md:top-20 md:left-auto md:w-fit w-8/12' src={elipse} alt="backimg" />
+            <img className='relative mx-auto md:mx-0 md:left-5 md:w-fit w-8/12' src={KateAbout} alt="img" />
         </div>
         <div className='flex flex-col justify-start mt-10 md:w-2/4 w-full'>
-            
             <div className='md:w-9/12 md:ml-0 md:px-0 px-5 w-full'>
                 <Appear>
                     <div className='flex'>

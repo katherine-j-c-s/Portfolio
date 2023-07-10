@@ -15,35 +15,46 @@ export default function Home({info}) {
     <div id={`${info.id}`} className='w-full h-fit relative'>
       <ScrollRight>
         <div className='bg-gradient-to-r absolute z-10 from-[#141414] via-[#332836] to-[#DA0BFF] h-full w-full opacity-50'></div>
-        <div className='md:flex h-fit pt-24  align-bottom md:flex-row flex-col justify-center text-center md:text-justify w-full relative'>
-          <div className='relative w-full md:w-fit mt-10 md:mt-52 z-20 h-fit'>
-            <Reveal> 
-              <p className='md:text-2xl text-xl mb-4 ml-10 md:ml-1'>{text}</p>
-            </Reveal>
-            <Reveal>
-              <h1 className='md:text-6xl text-3xl md:ml-0 ml-10 font-bold'>{info.name}</h1>
-            </Reveal>
-            <Reveal> 
-              <h2 className='md:text-3xl text-2xl md:ml-1 ml-10 mt-8 font-bold'>{info.position}</h2>
-            </Reveal>
-            <Reveal> 
-              <div className='bg-[#DA0BFF] h-1 w-52 ml-10 md:mx-0 mx-auto md:ml-1 mt-3'></div>
-            </Reveal>
-            <Reveal> 
-              <div className='flex md:w-52 w-full md:mx-0 ml-12 justify-evenly mt-3'>
-                <div className='w-fit cursor-pointer h-fit p-2 rounded-full bg-[#DA0BFF] '>
-                  <img className='h-8 w-8' src={icon1} alt="mail" />
+        <div className='md:flex h-fit pt-20  align-bottom md:flex-row flex-col justify-center text-center md:text-justify w-full relative'>
+          <div className='relative w-full flex aling-middle flex-col justify-center md:w-fit mt-10 md:mt-44 z-20 h-fit'>
+            <div className='mx-auto md:mx-0'>
+              <Reveal> 
+              <p className='md:text-2xl text-xl mb-4 md:ml-1'>{text}</p>
+              </Reveal>
+            </div>
+            <div className='mx-auto md:mx-0'>
+              <Reveal>
+                <h1 className='md:text-6xl text-3xl md:ml-0 font-bold'>{info.name}</h1>
+              </Reveal>
+            </div>
+            <div className='mx-auto md:mx-0'>
+              <Reveal> 
+              <h2 className='md:text-3xl text-2xl md:ml-1 mt-8 font-bold'>{info.position}</h2>
+              </Reveal>
+            </div>
+            <div className='mx-auto md:mx-0'>
+              <Reveal> 
+                <div className='bg-[#DA0BFF] h-1 w-52 md:mx-0 mx-auto md:ml-1 mt-3'></div>
+              </Reveal>
+            </div>
+            <div className='mx-auto md:mx-0'>
+              <Reveal> 
+                <div className='flex md:w-52 w-full md:mx-0 ml-0 justify-evenly mt-3'>
+                  <div className='w-fit cursor-pointer h-fit p-2 rounded-full bg-[#DA0BFF] '>
+                    <img className='h-8 w-8' src={icon1} alt="mail" />
+                  </div>
+                  <div className='w-fit cursor-pointer mx-2 h-fit p-2 rounded-full bg-[#DA0BFF] '>
+                    <img className='h-8 w-8' src={icon2} alt="mail" />
+                  </div>
+                  <div className='w-fit cursor-pointer h-fit p-2 rounded-full bg-[#DA0BFF] '>
+                    <img className='h-8 w-8' src={icon3} alt="mail" />
+                  </div>
                 </div>
-                <div className='w-fit cursor-pointer h-fit p-2 rounded-full bg-[#DA0BFF] '>
-                  <img className='h-8 w-8' src={icon2} alt="mail" />
-                </div>
-                <div className='w-fit cursor-pointer h-fit p-2 rounded-full bg-[#DA0BFF] '>
-                  <img className='h-8 w-8' src={icon3} alt="mail" />
-                </div>
-              </div>
-            </Reveal>
+              </Reveal>
+            </div>
+            
           </div>
-          <img className='relative z-0 w-full md:w-4/12 md:mx-0 mx-auto md:h-full h-80' src={Kate} alt="img" />
+          <img className='relative z-0 w-full md:w-4/12 bottom-0 md:mx-0 mx-auto md:h-full' src={Kate} alt="img" />
         </div>
       </ScrollRight>
     </div>

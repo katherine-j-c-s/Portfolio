@@ -33,7 +33,7 @@ export default function Skills({info}) {
                     return(
                         <div key={i} className='relative' onMouseEnter={()=> handleDetail(item.title, item.rate)} onMouseLeave={()=>setShowDetail({show:false})}>
                             <img className='h-12 m-4 w-12 relative z-0' src={item.icon} alt="img" />
-                            <div className={`absolute bottom-0 transition-all rounded-md ${showDetail.show === false ? 'translate-y-0' : 'bg-[#8D8D8D] -translate-y-24 text-slate-300 h-fit w-36 pl-4 z-10'}`}>
+                            <div className={`absolute bottom-0 transition-all rounded-md ${showDetail.show === false ? 'translate-y-0' : 'bg-[#8D8D8D] md:translate-x-0 -translate-x-10 -translate-y-24 text-slate-300 h-fit w-36 pl-4 z-10'}`}>
                                 <p>{title}</p>
                                 {showDetail.show !== false && title !== "" ? 
                                     <div className='flex my-3 w-fit'>
@@ -52,7 +52,8 @@ export default function Skills({info}) {
                                 : null}
                             </div>
                         </div>
-                )})}
+                    )
+                })}
             </div>
         </div> 
         </Appear>
