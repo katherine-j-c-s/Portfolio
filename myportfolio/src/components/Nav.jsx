@@ -20,9 +20,9 @@ export default function Nav({changeLanguage,info}) {
     
     const showLangueje = () => {
         if (showlang === false) {
-            setShowNav(true)
+            setShowLang(true)
         }else{
-            setShowNav(false)
+            setShowLang(false)
         }
     }
     
