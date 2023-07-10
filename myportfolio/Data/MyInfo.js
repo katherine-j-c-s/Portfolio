@@ -178,22 +178,22 @@ export const info = {
                 },{
                     name: "JavaScript Avanzado",
                     academy:"Educacion It",
-                    desc: "Un Curso en línea intensivo que simula un entorno laboral real y te prepara para una exitosa carrera como desarrollador Full Stack.",
+                    desc: "Domina el desarrollo del lado del cliente y conviértete en Front End Web Developer. Aprende a utilizar JavaScript para crear experiencias altamente interactivas.",
                     certificate: cetificate1
                 },{
                     name: "JavaScript desde Cero",
                     academy:"Educacion It",
-                    desc: "Un Curso en línea intensivo que simula un entorno laboral real y te prepara para una exitosa carrera como desarrollador Full Stack.",
+                    desc: "Domina los fundamentos de la programación a través de uno de los lenguajes más utilizados del mercado. Aprende a generar desarrollos en entornos Web y Mobile.",
                     certificate: cetificate2
                 },{
                     name: "Introducción a la Programación parte 2",
                     academy:"Chicas Digitalers",
-                    desc: "Un Curso en línea intensivo que simula un entorno laboral real y te prepara para una exitosa carrera como desarrollador Full Stack.",
+                    desc: "Es un espacio de formación gratuita que busca transmitir a jóvenes mujeres el entusiasmo por la tecnología ,enseñano las bases de Html, CSS y JavaScript",
                     certificate: cetificate3
                 },{
                     name: "Introducción a la Programación parte 1",
                     academy:"Chicas Digitalers",
-                    desc: "Un Curso en línea intensivo que simula un entorno laboral real y te prepara para una exitosa carrera como desarrollador Full Stack.",
+                    desc: "Es un espacio de formación gratuita que busca transmitir a jóvenes mujeres el entusiasmo por la tecnología ,enseñano las bases de Html, CSS y JavaScript",
                     certificate: cetificate4
                 },
             ]
@@ -353,22 +353,22 @@ export const info = {
                 },{
                     name: "Advanced JavaScript",
                     academy:"Educacion It",
-                    desc: "Un Curso en línea intensivo que simula un entorno laboral real y te prepara para una exitosa carrera como desarrollador Full Stack.",
+                    desc: "Master client-side development and become a Front End Web Developer. Learn how to use JavaScript to create highly interactive experiences.",
                     certificate: cetificate1
                 },{
                     name: "JavaScript from scratch",
                     academy:"Educacion It",
-                    desc: "Un Curso en línea intensivo que simula un entorno laboral real y te prepara para una exitosa carrera como desarrollador Full Stack.",
+                    desc: "Master the fundamentals of programming through one of the most widely used languages in the market. Learn how to create developments in Web and Mobile environments.",
                     certificate: cetificate2
                 },{
                     name: "Introduction to Programming part 2",
                     academy:"Chicas Digitalers",
-                    desc: "Un Curso en línea intensivo que simula un entorno laboral real y te prepara para una exitosa carrera como desarrollador Full Stack.",
+                    desc: "It is a free training space that seeks to transmit to young women the enthusiasm for technology, teaching the foundations of HTML, CSS, and JavaScript.",
                     certificate: cetificate3
                 },{
                     name: "Introduction to Programming part 1",
                     academy:"Chicas Digitalers",
-                    desc: "Un Curso en línea intensivo que simula un entorno laboral real y te prepara para una exitosa carrera como desarrollador Full Stack.",
+                    desc: "It is a free training space that seeks to transmit to young women the enthusiasm for technology, teaching the foundations of HTML, CSS, and JavaScript.",
                     certificate: cetificate4
                 },
             ]
