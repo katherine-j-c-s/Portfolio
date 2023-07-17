@@ -161,7 +161,7 @@ export const info = {
                     title: "Videogames",
                     icon: project2,
                     youtubeVideo:"https://www.youtube.com/watch?v=-IIMIRXiVP4&t=80s",
-                    link:"https://pi-video-games-seven.vercel.app/",
+                    link:"https://github.com/katherine-j-c-s/PI_VideoGames",
                 }
             ]
         },
@@ -336,7 +336,7 @@ export const info = {
                     title: "Videogames",
                     icon: project2,
                     youtubeVideo:"https://www.youtube.com/watch?v=-IIMIRXiVP4&t=80s",
-                    link:"https://pi-video-games-seven.vercel.app/",
+                    link:"https://github.com/katherine-j-c-s/PI_VideoGames",
                 }
             ]
         },
