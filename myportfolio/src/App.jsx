@@ -5,11 +5,9 @@ import {info} from '../Data/MyInfo'
 
 import Nav from './components/Nav'
 import Home from './components/Home'
-import About from './components/About'
-import Skills from './components/Skills'
 import Projects from './components/Projects'
-import Education from './components/Education'
 import Contact from './components/Contact'
+import Personal from './components/Personal'
 
 
 
@@ -28,10 +26,8 @@ function App() {
     <main className='bg-[#110E2F] text-slate-300 h-full w-full m-0 p-0'>
       <Nav changeLanguage={changeLanguage} info={data.nav} />
       <Home info={data.Home}/>
-      <About info={data.About}/>
-      <Skills info={data.Skills} />
+      <Personal info={data.Personal}/>
       <Projects info={data.Projects}/>
-      <Education info={data.Education}/>
       <Contact info={data.Contact} />
     </main>
   )

@@ -1,78 +1,244 @@
-import React, { useState } from 'react'
-import {Link} from 'react-scroll'
-import logo from '../assets/k.png'
-import vector from '../assets/Vector.png'
-import iconLanguage from '../assets/world-wide-web.png'
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-scroll';
+import { motion, AnimatePresence } from 'framer-motion';
+import { FiChevronRight, FiChevronLeft } from 'react-icons/fi';
+import logo from '../assets/k.png';
+import iconLanguage from '../assets/world-wide-web.png';
+import { AnimatedUnderlineLink } from './AnimatedUnderlineLink';
+import { NavDot } from './NavDot';
+import { Appear } from './Appear';
 
-export default function Nav({changeLanguage,info}) {
+export default function Nav({ changeLanguage, info }) {
+  const [showLang, setShowLang] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState(info.items[0].id);
+  const [isMobile, setIsMobile] = useState(false);
+  const [scrollProgress, setScrollProgress] = useState(0);
+  
+  // Handle screen size detection
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
     
-    const [showlang, setShowLang] = useState(false)
-    const [showNav,setShowNav] = useState(false)
+    handleResize(); // Initial check
+    window.addEventListener('resize', handleResize);
+    
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+  
+  // Handle scroll progress calculation and active section detection
+  useEffect(() => {
+    const handleScroll = () => {
+      // Calculate scroll progress as percentage
+      const windowHeight = window.innerHeight;
+      const documentHeight = document.documentElement.scrollHeight - windowHeight;
+      const scrollPosition = window.scrollY;
+      const progress = (scrollPosition / documentHeight) * 100;
+      setScrollProgress(progress);
+      
+      // Find the section that's currently in view
+      const scrollPositionForSection = window.scrollY + window.innerHeight / 3;
+      
+      for (const item of info.items) {
+        const element = document.getElementById(item.id);
+        if (element) {
+          const { offsetTop, offsetHeight } = element;
+          if (scrollPositionForSection >= offsetTop && scrollPositionForSection < offsetTop + offsetHeight) {
+            setActiveSection(item.id);
+            break;
+          }
+        }
+      }
+    };
+    
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Initial check
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [info.items]);
+  
+  // Función para cambiar de idioma
+  const toggleLanguage = () => {
+    changeLanguage(info.language === "English" ? "Spanish" : "English");
+    setShowLang(false);
+  };
+  
+  // Función para abrir/cerrar el menú
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+  
+  // Manejador de clic en items de navegación
+  const handleNavClick = (id) => {
+    setActiveSection(id);
+    if (isMobile) {
+      setMenuOpen(false);
+    }
+  };
 
-    const handleNav = () => {
-        if (showNav) {
-            {console.log(showNav)}
-            setShowNav(false)
-        }else {
-            setShowNav(true)
-        }
-    }
-    
-    const showLangueje = () => {
-        if (showlang === false) {
-            setShowLang(true)
-        }else{
-            setShowLang(false)
-        }
-    }
-    
-    const language = () => {
-        if (info.language === "English") {
-            changeLanguage("Spanish")
-            setShowLang(false)
-        }else if (info.language === "Spanish") {
-            changeLanguage("English")
-            setShowLang(false)
-        }
-    }
   return (
-    <div className='fixed z-40 h-24 flex justify-between w-full'>
-        <div className='bg-[#00000076] hidden md:flex absolute z-10 h-full w-full opacity-50'></div>
-        <Link 
-            to={`${info.items[0].id}`} 
-            spy={true} 
+    <>
+      {/* Progress Bar (fixed at top of screen) */}
+      <div className="fixed top-0 left-0 w-full h-1 bg-[#2A2550] z-50">
+        <motion.div 
+          className="h-full bg-[#DA0BFF]"
+          style={{ width: `${scrollProgress}%` }}
+        />
+      </div>
+      
+      <div className="fixed z-40 w-full h-24 flex justify-between items-center mt-1">
+        {/* Background overlay for desktop */}
+        <div className="bg-[#00000076] hidden md:block absolute z-10 h-full w-full opacity-50"></div>
+        
+        {/* Desktop Navigation */}
+        <div className="hidden md:flex w-full justify-between items-center px-10 z-20">
+          <Link
+            to={info.items[0].id}
+            spy={true}
             smooth={true}
-            offset={50} 
-            duration={500} 
-            className='cursor-pointer mt-3 z-20 md:ml-10 ml-10 h-16 md:h-fit md:w-fit'>
-            <img src={logo} alt="logo" />
-        </Link> 
-        <img onClick={handleNav} className='flex relative z-40 md:hidden h-8 w-8 mt-7 mr-12' src={vector} alt="hamburgesa" />
-        <div className={`flex transition-all md:relative z-20 md:bg-transparent md:w-fit h-fit w-full top-0 md:-left-10 md:top-3 left-0 bg-[#110E2F] absolute ${showNav === false ? ' -translate-y-96 md:translate-y-0 md:opacity-100 opacity-0' : 'translate-x-0'}`}>
-            <div className={`flex md:flex-row md:bg-transparent ${showNav === false ? 'pt-0' : 'pt-10 pb-20'}  md:pt-0 bg-[#110E2F] w-full flex-col md:relative absolute mt-6`}>
-                {info.items.map((item,i)=>(
-                    <Link 
-                        to={`${item.id}`} 
-                        spy={true} 
-                        smooth={true}
-                        offset={50} 
-                        duration={500} 
-                        onClick={(()=>setShowNav(false))}
-                        className='md:mx-5 md:my-0 my-8 mx-auto md:text-base text-[#D9D9D9] transition-all hover:text-[#DA0BFF] text-xl cursor-pointer' 
-                        key={i}>
-                            {item.name}
-                    </Link>
-                ))}
+            offset={0}
+            duration={800}
+            className="cursor-pointer"
+          >
+            <img src={logo} alt="logo" className="h-16"/>
+          </Link>
+          
+          <div className="flex items-center">
+            {info.items.map((item, i) => (
+              <div key={i} className="mx-5">
+                <AnimatedUnderlineLink
+                  to={item.id}
+                  isActive={activeSection === item.id}
+                  onClick={() => handleNavClick(item.id)}
+                >
+                  {item.name}
+                </AnimatedUnderlineLink>
+              </div>
+            ))}
+            
+            <div className="relative ml-8">
+              <div 
+                onClick={() => setShowLang(!showLang)}
+                className="p-1 rounded-full cursor-pointer bg-[#D9D9D9] hover:-translate-y-2 transition-all"
+              >
+                <img src={iconLanguage} className="h-8 w-8" alt="language" />
+              </div>
+              
+              <AnimatePresence>
+                {showLang && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 10 }}
+                    className="absolute right-0 mt-2 py-2 px-4 bg-[#110E2F] rounded-lg shadow-lg"
+                  >
+                    <p 
+                      onClick={toggleLanguage}
+                      className="cursor-pointer hover:text-[#DA0BFF]"
+                    >
+                      {info.language === "English" ? "Spanish" : "Inglés"}
+                    </p>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
-            <div className='relative md:mt-5 mt-6 md:ml-0 -ml-16 flex justify-end w-32 z-40'>
-                <div className='z-40 md:bg-transparent md:hover:bg-[#D9D9D9] transition-all md:hover:p-1 bg-[#D9D9D9] md:p-0 p-1 rounded-full cursor-pointer relative'>
-                    <img onClick={showLangueje} src={iconLanguage} className='h-8 w-8 ' alt="img" />
-                </div>
-                <div className={`absolute cursor-pointer transition-all py-2 px-4 rounded-full z-0 top-0 ${showlang === false ? 'translate-y-0 opacity-0' : 'translate-y-20'} ${showNav === true ? ' translate-x-10 bg-white text-black' : 'bg-[#110E2F] translate-x-0'}`}>
-                    <p onClick={language}>{info.language === "English" ? "Spanish" : "Inglés"}</p>
-                </div>
-            </div>
+          </div>
         </div>
-    </div>
-  )
+        
+        {/* Mobile Navigation */}
+        <div className="md:hidden flex w-full justify-between items-center z-30">
+          {/* Mobile navigation menu */}
+          <motion.div 
+            className="fixed left-0 top-0 h-full flex items-center"
+            animate={{
+              width: menuOpen ? '50%' : 'auto',
+              background: menuOpen 
+                ? 'linear-gradient(to right, rgba(17, 14, 47, 1), rgba(17, 14, 47, 0))' 
+                : 'transparent'
+            }}
+          >
+            <motion.div
+              className="flex flex-col items-center ml-4"
+              animate={{
+                x: menuOpen ? '50%' : 0
+              }}
+              transition={{ duration: 0.4 }}
+            >
+              {/* Menu Button */}
+              <motion.div 
+                className="p-2 cursor-pointer mb-16 text-white"
+                animate={{ rotate: menuOpen ? 180 : 0 }}
+                transition={{ duration: 0.4 }}
+                onClick={toggleMenu}
+              >
+                {menuOpen ? <FiChevronLeft size={24} /> : <FiChevronRight size={24} />}
+              </motion.div>
+              
+              {/* Section links when menu is open */}
+              {menuOpen && (
+                <div className="flex flex-col items-start">
+                  <AnimatePresence>
+                    {info.items.map((item, i) => (
+                      <motion.div
+                        key={i}
+                        animate={{ x: 20 }}
+                        transition={{ duration: 0.4, delay: i * 0.05 }}
+                      >
+                        <motion.div
+                          initial={{ opacity: 0, x: -20 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          transition={{ duration: 0.3, delay: 0.4 + i * 0.05 }}
+                        >
+                          <AnimatedUnderlineLink
+                            to={item.id}
+                            isActive={activeSection === item.id}
+                            onClick={() => handleNavClick(item.id)}
+                          >
+                            {item.name}
+                          </AnimatedUnderlineLink>
+                        </motion.div>
+                      </motion.div>
+                    ))}
+                  </AnimatePresence>
+                </div>
+              )}
+            </motion.div>
+          </motion.div>
+          
+          {/* Language selector fixed in the bottom right */}
+          <div className="fixed bottom-6 right-6 z-50">
+            <div 
+              onClick={() => setShowLang(!showLang)}
+              className="p-1 rounded-full cursor-pointer bg-[#D9D9D9] hover:scale-110 transition-all"
+            >
+              <img src={iconLanguage} className="h-8 w-8" alt="language" />
+            </div>
+            
+            <AnimatePresence>
+              {showLang && (
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 10 }}
+                  className="absolute bottom-full right-0 mb-2 py-2 px-4 bg-[#110E2F] rounded-lg shadow-lg"
+                >
+                  <p 
+                    onClick={toggleLanguage}
+                    className="cursor-pointer hover:text-[#DA0BFF] text-white whitespace-nowrap"
+                  >
+                    {info.language === "English" ? "Spanish" : "Inglés"}
+                  </p>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+        </div>
+      </div>
+    </>
+  );
 }

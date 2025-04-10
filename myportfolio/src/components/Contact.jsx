@@ -90,9 +90,9 @@ export default function Contact({info}) {
   };
   return (
     <ScrollRight>
-    <div id={`${info.id}`} className='w-full h-fit relative mt-32 flex md:flex-row flex-col-reverse justify-center'>
+    <div id={`${info.id}`} className='w-full h-fit relative mt-0 flex md:flex-row flex-col-reverse justify-center'>
       <div className='bg-gradient-to-r absolute from-[#141414] via-[#332836] to-[#DA0BFF] h-full w-full opacity-50'></div>
-      <div className='md:w-fit w-10/12 md:mt-12 mt-10 md:mx-0 mx-auto md:mr-44 flex md:flex-col flex-col-reverse md:my-16 relative z-30'>
+      <div className='md:w-fit w-10/12 md:mt-12 mt-0 md:mx-0 mx-auto md:mr-44 flex md:flex-col flex-col-reverse md:my-16 relative z-30'>
         <Appear>
         <img src={img} alt="img" />
         </Appear>
