@@ -17,8 +17,8 @@ import modalImg from '../src/assets/modalImg.png'
 import chooseCharacterImg from '../src/assets/chooseCharacterImg.png'
 import navbarImg from '../src/assets/navbarImg.png'
 
-import cvEnglish from '../src/assets/cvEnglish.pdf'
-import cvSpanish from '../src/assets/cvEspañol.pdf'
+import cvEnglish from './CVKatherine.pdf'
+import cvSpanish from './cvKatherineContreras.pdf'
 
 import cetificate0 from '../src/assets/CertificateHenry.png'
 import cetificate1 from '../src/assets/educationitAdvanced.png'
