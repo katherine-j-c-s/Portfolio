@@ -8,6 +8,7 @@ import compadritoImg from '../src/assets/compadritoImg.png'
 import katriezImg from '../src/assets/katriezImg.png'
 import hotelImg from '../src/assets/hotelImg.png'
 import myflix from '../src/assets/myflix.png'
+import covid19 from '../src/assets/covid19.png'
 import miniImg from '../src/assets/miniImg.png'
 import caraKoalaImg from '../src/assets/caraKoalaImg.png'
 import questionImg from '../src/assets/questionImg.png'
@@ -267,6 +268,11 @@ export const info = {
                 image: myflix,
                 link: "https://tp1react-pied.vercel.app/",
                 detail: "diseño de netflix para ir agregando peliculas o series. Web responsive con React."
+              },{
+                title: "Covid 19",
+                image: covid19,
+                link: "https://trabajo-covid-19.vercel.app/",
+                detail: "sitio web para concientizar el impacto del covid 19. Web responsive con React."
               },
               {
                 title: "Mini Proyectos",
@@ -555,6 +561,11 @@ export const info = {
                 image: myflix,
                 link: "https://tp1react-pied.vercel.app/",
                 detail: "Netflix design to add movies or tv shows. Responsive and made in React."
+              },{
+                title: "Covid 19",
+                image: covid19,
+                link: "https://trabajo-covid-19.vercel.app/",
+                detail: "sitio web to raise awareness of covid 19. Responsive and made in React."
               },
               {
                 title: "Mini Projects",
