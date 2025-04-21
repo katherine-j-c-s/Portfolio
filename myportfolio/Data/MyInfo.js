@@ -7,6 +7,7 @@ import manicureImg from '../src/assets/manicureImg.png'
 import compadritoImg from '../src/assets/compadritoImg.png'
 import katriezImg from '../src/assets/katriezImg.png'
 import hotelImg from '../src/assets/hotelImg.png'
+import myflix from '../src/assets/myflix.png'
 import miniImg from '../src/assets/miniImg.png'
 import caraKoalaImg from '../src/assets/caraKoalaImg.png'
 import questionImg from '../src/assets/questionImg.png'
@@ -261,6 +262,11 @@ export const info = {
                 image: compadritoImg,
                 link: "https://website-mi-compadrito.vercel.app/",
                 detail: "Sitio para venta de comida casera. Web responsive con React."
+              },{
+                title: "MyFlix",
+                image: myflix,
+                link: "https://tp1react-pied.vercel.app/",
+                detail: "diseño de netflix para ir agregando peliculas o series. Web responsive con React."
               },
               {
                 title: "Mini Proyectos",
@@ -544,6 +550,11 @@ export const info = {
                 image: compadritoImg,
                 link: "https://website-mi-compadrito.vercel.app/",
                 detail: "Food sale website for a local kiosk. Responsive and made in React."
+              },{
+                title: "MyFlix",
+                image: myflix,
+                link: "https://tp1react-pied.vercel.app/",
+                detail: "Netflix design to add movies or tv shows. Responsive and made in React."
               },
               {
                 title: "Mini Projects",
