@@ -216,12 +216,12 @@ export const info = {
                 link: "https://sportwear.vercel.app/",
                 detail: "Tienda online de ropa deportiva. Página principal responsiva con React y Tailwind."
               },
-              {
-                title: "Videojuegos",
-                image: videogamesImg,
-                link: "https://github.com/katherine-j-c-s/PI_VideoGames",
-                detail: "App SPA que permite buscar, filtrar y agregar videojuegos usando una API. Hecha con React y Redux."
-              },
+              // {
+              //   title: "Videojuegos",
+              //   image: videogamesImg,
+              //   link: "https://github.com/katherine-j-c-s/PI_VideoGames",
+              //   detail: "App SPA que permite buscar, filtrar y agregar videojuegos usando una API. Hecha con React y Redux."
+              // },
               {
                 title: "Los Ángeles Mountains",
                 image: losAngelesImg,
@@ -509,12 +509,12 @@ export const info = {
                 link: "https://sportwear.vercel.app/",
                 detail: "Online store for sportswear. Main landing page built with React and Tailwind."
               },
-              {
-                title: "Videogames",
-                image: videogamesImg,
-                link: "https://github.com/katherine-j-c-s/PI_VideoGames",
-                detail: "SPA app to search, filter, and create videogames. Built with React and Redux using an external API."
-              },
+              // {
+              //   title: "Videogames",
+              //   image: videogamesImg,
+              //   link: "https://github.com/katherine-j-c-s/PI_VideoGames",
+              //   detail: "SPA app to search, filter, and create videogames. Built with React and Redux using an external API."
+              // },
               {
                 title: "Los Ángeles Mountains",
                 image: losAngelesImg,
