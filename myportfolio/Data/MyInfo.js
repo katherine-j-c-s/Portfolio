@@ -9,6 +9,7 @@ import katriezImg from '../src/assets/katriezImg.png'
 import hotelImg from '../src/assets/hotelImg.png'
 import myflix from '../src/assets/myflix.png'
 import covid19 from '../src/assets/covid19.png'
+import crypto from '../src/assets/crypto.png'
 import miniImg from '../src/assets/miniImg.png'
 import caraKoalaImg from '../src/assets/caraKoalaImg.png'
 import questionImg from '../src/assets/questionImg.png'
@@ -273,6 +274,11 @@ export const info = {
                 image: covid19,
                 link: "https://trabajo-covid-19.vercel.app/",
                 detail: "sitio web para concientizar el impacto del covid 19. Web responsive con React."
+              },{
+                title: "Crypto",
+                image: crypto,
+                link: "https://coingecko-react-tailwindcss-crypto.vercel.app/",
+                detail: "sitio web using and api of crypto. Responsive and made in React."
               },
               {
                 title: "Mini Proyectos",
@@ -566,6 +572,11 @@ export const info = {
                 image: covid19,
                 link: "https://trabajo-covid-19.vercel.app/",
                 detail: "sitio web to raise awareness of covid 19. Responsive and made in React."
+              },{
+                title: "Crypto",
+                image: crypto,
+                link: "https://coingecko-react-tailwindcss-crypto.vercel.app/",
+                detail: "sitio web using and api of crypto. Responsive and made in React."
               },
               {
                 title: "Mini Projects",
