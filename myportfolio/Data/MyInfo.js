@@ -266,7 +266,7 @@ export const info = {
               },{
                 title: "MyFlix",
                 image: myflix,
-                link: "https://tp1react-pied.vercel.app/",
+                link: "https://my-flix-one.vercel.app/",
                 detail: "diseño de netflix para ir agregando peliculas o series. Web responsive con React."
               },{
                 title: "Covid 19",
@@ -559,7 +559,7 @@ export const info = {
               },{
                 title: "MyFlix",
                 image: myflix,
-                link: "https://tp1react-pied.vercel.app/",
+                link: "https://my-flix-one.vercel.app/",
                 detail: "Netflix design to add movies or tv shows. Responsive and made in React."
               },{
                 title: "Covid 19",
