@@ -9,7 +9,8 @@ import katriezImg from '../src/assets/katriezImg.png'
 import hotelImg from '../src/assets/hotelImg.png'
 import myflix from '../src/assets/myflix.png'
 import covid19 from '../src/assets/covid19.png'
-import crypto from '../src/assets/crypto.png'
+import crypto from '../src/assets/crypto.jpg'
+import gameOfThone from "../src/assets/gameOfThone.png"
 import miniImg from '../src/assets/miniImg.png'
 import caraKoalaImg from '../src/assets/caraKoalaImg.png'
 import questionImg from '../src/assets/questionImg.png'
@@ -278,7 +279,12 @@ export const info = {
                 title: "Crypto",
                 image: crypto,
                 link: "https://coingecko-react-tailwindcss-crypto.vercel.app/",
-                detail: "sitio web using and api of crypto. Responsive and made in React."
+                detail: "sitio web que usa una api de crypto. Web responsive con React."
+              },{
+                title: "Game Of Trone",
+                image: gameOfThone,
+                link: "https://game-of-trone.vercel.app/",
+                detail: "sitio web que esta usando 2 apis de juego de tronos. Web responsive con React."
               },
               {
                 title: "Mini Proyectos",
@@ -577,6 +583,11 @@ export const info = {
                 image: crypto,
                 link: "https://coingecko-react-tailwindcss-crypto.vercel.app/",
                 detail: "sitio web using and api of crypto. Responsive and made in React."
+              },{
+                title: "Game Of Trone",
+                image: gameOfThone,
+                link: "https://game-of-trone.vercel.app/",
+                detail: "sitio web using 2 apis of game of trone. Responsive and made in React."
               },
               {
                 title: "Mini Projects",
