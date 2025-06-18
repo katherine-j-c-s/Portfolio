@@ -21,8 +21,8 @@ import modalImg from '../src/assets/modalImg.png'
 import chooseCharacterImg from '../src/assets/chooseCharacterImg.png'
 import navbarImg from '../src/assets/navbarImg.png'
 
-import cvEnglish from './CVKatherine.pdf'
-import cvSpanish from './cvKatherineContreras.pdf'
+import cvEnglish from './CVEnglish.pdf'
+import cvSpanish from './CVSpanish.pdf'
 
 import cetificate0 from '../src/assets/CertificateHenry.png'
 import cetificate1 from '../src/assets/educationitAdvanced.png'
@@ -76,8 +76,8 @@ export const info = {
                 id:"about",
                 text:"Sobre Mi",
                 Title:"Quien Soy",
-                desc1:"Comencé a programar gracias a la pandemia y porque quería aprender algo nuevo. Una vez que comencé, no había vuelta atrás 😍.",
-                desc2:"Una de las cosas que me encantó de programar fue la cantidad de cosas que podía aprender a hacer con ello, y el hecho de que siempre está cambiando y mejorando, por lo que siempre hay algo nuevo que aprender cada día💪.",
+                desc1:"Soy desarrolladora frontend, enfocada en crear experiencias web modernas, interactivas y escalables. Comencé a programar durante la pandemia y me apasioné por construir soluciones reales que sean funcionales y atractivas.",
+                desc2:"Últimamente he explorado la integración de IA en mis proyectos y el desarrollo de herramientas colaborativas que resuelven problemas cotidianos. Disfruto transformar ideas en productos concretos y mejorar constantemente a través de la práctica y los desafíos creativos.",
                 botons:['Contacto','Descargar CV'],
                 cv: cvSpanish,
                 pathName: "cvEspañol"
@@ -379,8 +379,8 @@ export const info = {
                 id:"about",
                 text:"About me",
                 Title:"Who Am I ",
-                desc1:"I started programming thanks to the pandemic and because I wanted to learn something new. once i started there was no going back 😍 .",
-                desc2:"One of the things I loved about programming was how much I could learn to do with it, and the fact that it always keep changing and improving so there was always something new to learn every day💪",
+                desc1:"I’m a frontend developer focused on creating modern, interactive, and scalable web experiences. I started programming during the pandemic, and quickly became passionate about building real solutions that are both functional and engaging.",
+                desc2:"Lately, I’ve explored integrating AI into my projects and developing collaborative tools that solve everyday problems. I enjoy transforming ideas into real products and continuously improving through hands-on practice and creative challenges.",
                 botons:['Contact','Dowload Cv'],
                 cv: cvEnglish,
                 pathName: "cvEnglish"
