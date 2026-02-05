@@ -49,6 +49,7 @@ export const Reveal = ({ children, width = "fit-content" }) => {
           right: 0,
           background: "#DA0BFF",
           zIndex: 20,
+          pointerEvents: "none",
         }}
       />
     </div>

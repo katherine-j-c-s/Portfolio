@@ -7,8 +7,15 @@ export default function AboutSection({ info }) {
   // Manejadores de eventos
   const handleOpenGmail = () => {
     const emailAddress = 'kathijcs@gmail.com';
-    const mailtoLink = `mailto:${emailAddress}`;
-    window.location.href = mailtoLink;
+    const subject = info?.language === "English" ? "Portfolio contact" : "Contacto desde el portafolio";
+    const body = info?.language === "English" ? "Hi Katherine,\n\n" : "Hola Katherine,\n\n";
+    const gmailComposeUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(
+      emailAddress
+    )}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    const mailtoHref = `mailto:${emailAddress}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+    const w = window.open(gmailComposeUrl, '_blank');
+    if (!w) window.location.href = mailtoHref;
   };
   
   const handleDownload = (path, pathName) => {

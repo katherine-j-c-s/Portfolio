@@ -23,11 +23,24 @@ export default function Home({info}) {
     }
   };
 
-  const handleOpenGmail = () => {
-    const emailAddress = 'kathijcs@gmail.com';
-    const mailtoLink = `mailto:${emailAddress}`;
-    window.location.href = mailtoLink;
-  };
+  const emailAddress = 'kathijcs@gmail.com';
+  const mailtoHref = `mailto:${emailAddress}?subject=${encodeURIComponent(
+    info.language === "English" ? "Portfolio contact" : "Contacto desde el portafolio"
+  )}&body=${encodeURIComponent(
+    info.language === "English"
+      ? "Hi Katherine,\n\n"
+      : "Hola Katherine,\n\n"
+  )}`;
+
+  const gmailComposeUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(
+    emailAddress
+  )}&su=${encodeURIComponent(
+    info.language === "English" ? "Portfolio contact" : "Contacto desde el portafolio"
+  )}&body=${encodeURIComponent(
+    info.language === "English"
+      ? "Hi Katherine,\n\n"
+      : "Hola Katherine,\n\n"
+  )}`;
 
   const linkedIn = 'https://www.linkedin.com/in/katherine-contreras/';
   const Github = 'https://github.com/katherine-j-c-s'; 
@@ -122,9 +135,18 @@ export default function Home({info}) {
           <div className='w-full mt-6 mb-8 md:mb-0'>
             <Reveal> 
               <div className='flex justify-center md:justify-start gap-4 mt-3'>
-                <div onClick={handleOpenGmail} className='cursor-pointer p-3 hover:shadow-md hover:shadow-[#000000] transition-all ease-in-out hover:-translate-y-1 rounded-full bg-[#DA0BFF]'>
+                <a
+                  href={mailtoHref}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    const w = window.open(gmailComposeUrl, '_blank');
+                    if (!w) window.location.href = mailtoHref;
+                  }}
+                  className='cursor-pointer p-3 hover:shadow-md hover:shadow-[#000000] transition-all ease-in-out hover:-translate-y-1 rounded-full bg-[#DA0BFF]'
+                  aria-label="Enviar email a kathijcs@gmail.com"
+                >
                   <img className='h-5 w-5 md:h-7 md:w-7' src={icon1} alt="mail" />
-                </div>
+                </a>
                 <div onClick={()=>handleOpenLink('L')} className='cursor-pointer p-3 hover:shadow-md hover:shadow-[#000000] transition-all ease-in-out hover:-translate-y-1 rounded-full bg-[#DA0BFF]'>
                   <img className='h-5 w-5 md:h-7 md:w-7' src={icon2} alt="linkedin" />
                 </div>
