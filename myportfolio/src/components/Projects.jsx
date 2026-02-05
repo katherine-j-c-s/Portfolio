@@ -41,15 +41,28 @@ export default function Projects({ info }) {
       {/* Contenedor principal de proyectos - ajustado para mejor visualización en PC */}
       <div className="container mx-auto mt-20 px-6 md:px-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-          {info.projects.map((project, index) => (
+          {info.projects.map((project, index) => {
+            const isClickable = Boolean(project?.miniProjects || project?.link);
+            const ctaText = project?.miniProjects
+              ? 'Ver Mini Proyectos'
+              : project?.link
+              ? info.More
+              : 'Privado';
+
+            return (
             <Appear key={index}>
               <motion.div
-                className="relative h-80 rounded-xl overflow-hidden cursor-pointer shadow-lg shadow-[#DA0BFF]/20"
+                className={`relative h-80 rounded-xl overflow-hidden shadow-lg shadow-[#DA0BFF]/20 ${
+                  isClickable ? 'cursor-pointer' : 'cursor-default'
+                }`}
                 onHoverStart={() => handleCardHover(index)}
                 onHoverEnd={() => handleCardHover(null)}
-                whileHover={{ scale: 1.03 }}
+                whileHover={isClickable ? { scale: 1.03 } : undefined}
                 transition={{ duration: 0.3 }}
-                onClick={() => project.miniProjects ? handleMiniProjectsClick(project) : openLinkInNewTab(project.link)}
+                onClick={() => {
+                  if (project?.miniProjects) return handleMiniProjectsClick(project);
+                  if (project?.link) return openLinkInNewTab(project.link);
+                }}
               >
                 {/* Card Image */}
                 <img 
@@ -79,18 +92,24 @@ export default function Projects({ info }) {
                       </div>
                       
                       <motion.button
-                        className={`mt-4 py-3 px-6 rounded-md ${project.miniProjects ? 'bg-indigo-600' : 'bg-[#DA0BFF]'} text-white font-medium`}
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
+                        className={`mt-4 py-3 px-6 rounded-md text-white font-medium ${
+                          project?.miniProjects
+                            ? 'bg-indigo-600'
+                            : project?.link
+                            ? 'bg-[#DA0BFF]'
+                            : 'bg-gray-600 cursor-not-allowed opacity-80'
+                        }`}
+                        whileHover={isClickable ? { scale: 1.05 } : undefined}
+                        whileTap={isClickable ? { scale: 0.95 } : undefined}
                       >
-                        {project.miniProjects ? 'Ver Mini Proyectos' : info.More}
+                        {ctaText}
                       </motion.button>
                     </motion.div>
                   )}
                 </AnimatePresence>
               </motion.div>
             </Appear>
-          ))}
+          )})}
         </div>
       </div>
 

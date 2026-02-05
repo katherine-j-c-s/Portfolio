@@ -1,5 +1,4 @@
 import sportwearImg from '../src/assets/sportwearImg.png'
-import videogamesImg from '../src/assets/videogamesImg.png'
 import losAngelesImg from '../src/assets/losAngelesImg.png'
 import pernaleteImg from '../src/assets/pernaleteImg.png'
 import verocruzImg from '../src/assets/verocruzImg.png'
@@ -21,9 +20,15 @@ import modalImg from '../src/assets/modalImg.png'
 import chooseCharacterImg from '../src/assets/chooseCharacterImg.png'
 import navbarImg from '../src/assets/navbarImg.png'
 
+import sistemaComercioImg from '../src/assets/sistema-comercio.png'
+import gestionQrImg from '../src/assets/gestion-qr.png'
+import controlDocumentacionImg from '../src/assets/control-documentacion.png'
+import controlInventarioImg from '../src/assets/control-inventario.jpg'
+
 import cvEnglish from './CVEnglish.pdf'
 import cvSpanish from './CVSpanish.pdf'
 
+import diplomaturaIA from '../src/assets/diplomatura-ia.jpg'
 import cetificate0 from '../src/assets/CertificateHenry.png'
 import cetificate1 from '../src/assets/educationitAdvanced.png'
 import cetificate2 from '../src/assets/EducationItFromScrach.png'
@@ -51,6 +56,14 @@ import icon18 from '../src/assets/visualstudiocode-color.svg'
 import icon19 from '../src/assets/figma-color.svg'
 import icon20 from '../src/assets/jira-color.svg'
 import icon21 from '../src/assets/php.svg'
+import icon22 from '../src/assets/typescript-color.png'
+import icon23 from '../src/assets/nextJS.png'
+import icon24 from '../src/assets/vite-color.png'
+import icon25 from '../src/assets/fastapi-color.webp'
+import icon26 from '../src/assets/supabase-color.png'
+import icon27 from '../src/assets/docker-color.png'
+import icon28 from '../src/assets/tauri.png'
+import icon29 from '../src/assets/cursor.png'
 
 export const info = {
     Spanish:{
@@ -65,8 +78,8 @@ export const info = {
         },
         Home:{
             id:"/",
-            position:"Desarrolladora Full Stack",
-            softSkills: "Me destaco por mi capacidad de adaptación, el trabajo en equipo y la comunicación asertiva. Me gusta aprender de los desafíos y mantener una actitud proactiva en todo lo que hago.",
+            position:"Full Stack Developer | AI Software Developer",
+            softSkills: "Me gusta crear productos que sean claros y fáciles de usar, cuidando los detalles. Hoy estoy enfocada en desarrollar soluciones reales para obra y documentación en Simetra, y en seguir incorporando herramientas de IA para mejorar flujos y procesos.",
             buttons: ["Proyectos","Contacto"]
         },
         Personal: {
@@ -76,8 +89,8 @@ export const info = {
                 id:"about",
                 text:"Sobre Mi",
                 Title:"Quien Soy",
-                desc1:"Soy desarrolladora frontend, enfocada en crear experiencias web modernas, interactivas y escalables. Comencé a programar durante la pandemia y me apasioné por construir soluciones reales que sean funcionales y atractivas.",
-                desc2:"Últimamente he explorado la integración de IA en mis proyectos y el desarrollo de herramientas colaborativas que resuelven problemas cotidianos. Disfruto transformar ideas en productos concretos y mejorar constantemente a través de la práctica y los desafíos creativos.",
+                desc1:"Soy desarrolladora web y disfruto mucho crear experiencias que sean lindas, claras y fáciles de usar. Me motiva aprender cosas nuevas, mejorar detalles y convertir ideas en productos reales.",
+                desc2:"Actualmente trabajo en Simetra, donde participo en el desarrollo de herramientas internas para obra y documentación: control de documentación, gestión de QRs para trazabilidad (con carga desde Excel y escáner), y un sistema de cotizaciones complejas en desktop con roles, estados y cálculos automáticos.",
                 botons:['Contacto','Descargar CV'],
                 cv: cvSpanish,
                 pathName: "cvEspañol"
@@ -103,6 +116,18 @@ export const info = {
                         rate: 4,
                         icon: icon4
                     },{
+                        title:"TypeScript",
+                        rate: 3,
+                        icon: icon22
+                    },{
+                        title:"Next.js",
+                        rate: 3,
+                        icon: icon23
+                    },{
+                        title:"Vite",
+                        rate: 4,
+                        icon: icon24
+                    },{
                         title:"Redux",
                         rate: 4,
                         icon: icon5
@@ -111,9 +136,25 @@ export const info = {
                         rate: 4,
                         icon: icon6
                     },{
+                        title:"FastAPI",
+                        rate: 3,
+                        icon: icon25
+                    },{
                         title:"PostgreSQL",
                         rate: 3,
                         icon: icon7
+                    },{
+                        title:"Supabase",
+                        rate: 4,
+                        icon: icon26
+                    },{
+                        title:"Docker",
+                        rate: 3,
+                        icon: icon27
+                    },{
+                        title:"Tauri",
+                        rate: 2,
+                        icon: icon28
                     },{
                         title:"MySQL",
                         rate: 3,
@@ -159,6 +200,10 @@ export const info = {
                         rate: 5,
                         icon: icon18
                     },{
+                        title:"Cursor",
+                        rate: 4,
+                        icon: icon29
+                    },{
                         title:"Figma",
                         rate: 5,
                         icon: icon19
@@ -178,6 +223,18 @@ export const info = {
                 Title:"Educación",
                 Certificate: "Ver Certificado",
                 info: [
+                    {
+                        name: "Tecnicatura Universitaria en Desarrollo Web",
+                        academy:"Facultad de Informática - Universidad Nacional del Comahue",
+                        desc: "Formación universitaria orientada al desarrollo web. Cursada finalizada, con título en trámite (entrega estimada: mayo).",
+                        note: "Título en trámite (mayo)"
+                    },
+                    {
+                        name: "Diplomatura en Ciencia de Datos e Inteligencia Artificial",
+                        academy:"IFES Educación",
+                        desc: "Diplomatura (ene 2024 - dic 2024). Proyecto final: modelo de red neuronal para reconocimiento de emociones faciales en tiempo real, con detección de rostros (Haar Cascade) y predicción de emociones en Python (Google Colab).",
+                        certificate: diplomaturaIA
+                    },
                     {
                         name: "Desarrrolladora Full Stack",
                         academy:"Soy Henry",
@@ -213,17 +270,42 @@ export const info = {
             More: "Ver Página",
             projects: [
               {
+                title: "Gestión de QRs (Calidad / Obra)",
+                image: gestionQrImg,
+                link: "",
+                private: true,
+                detail:
+                  "Trazabilidad en obra: carga masiva desde Excel, vínculo de documentación en Supabase, generación/impresión de QRs y escáner desde celular. (Privado)"
+              },
+              {
+                title: "Control de Documentación",
+                image: controlDocumentacionImg,
+                link: "https://control-documentos-sigma.vercel.app/",
+                detail:
+                  "Gestión de documentación por proyecto con Supabase (Auth/DB/Storage), emisión de archivos y generación de Remitos Excel + envío por email."
+              },
+              {
+                title: "Sistema de Comercio - Cotizaciones",
+                image: sistemaComercioImg,
+                link: "",
+                private: true,
+                detail:
+                  "Aplicación de escritorio para cotizaciones complejas (obras/ítems/catálogos), cálculos automáticos y flujo por roles. (Privado – uso interno)"
+              },
+              {
+                title: "Sistema de Control de Inventario (Tesis)",
+                image: controlInventarioImg,
+                link: "",
+                private: true,
+                detail:
+                  "Sistema web para gestionar productos, usuarios/roles y stock en tiempo real con Next.js + Node.js + PostgreSQL. (Privado)"
+              },
+              {
                 title: "SportWear",
                 image: sportwearImg,
                 link: "https://sportwear.vercel.app/",
                 detail: "Tienda online de ropa deportiva. Página principal responsiva con React y Tailwind."
               },
-              // {
-              //   title: "Videojuegos",
-              //   image: videogamesImg,
-              //   link: "https://github.com/katherine-j-c-s/PI_VideoGames",
-              //   detail: "App SPA que permite buscar, filtrar y agregar videojuegos usando una API. Hecha con React y Redux."
-              // },
               {
                 title: "Los Ángeles Mountains",
                 image: losAngelesImg,
@@ -368,8 +450,8 @@ export const info = {
             id:"/",
             text:"Hi!! My Name is",
             name:"Katherine Contreras",
-            position:"Full Stack Developer",
-            softSkills: "Im known for my adaptability, teamwork, and clear communication. I enjoy learning from challenges and always bring a proactive mindset to everything I do.",
+            position:"Full Stack Developer | AI Software Developer",
+            softSkills: "I enjoy building clean, friendly products and polishing details that make a real difference. Right now I’m focused on developing internal tools for site operations and documentation at Simetra, and on adding AI-powered improvements to workflows and processes.",
             buttons: ["Projects","Contact Me"]
         },
         Personal: {
@@ -379,8 +461,8 @@ export const info = {
                 id:"about",
                 text:"About me",
                 Title:"Who Am I ",
-                desc1:"I’m a frontend developer focused on creating modern, interactive, and scalable web experiences. I started programming during the pandemic, and quickly became passionate about building real solutions that are both functional and engaging.",
-                desc2:"Lately, I’ve explored integrating AI into my projects and developing collaborative tools that solve everyday problems. I enjoy transforming ideas into real products and continuously improving through hands-on practice and creative challenges.",
+                desc1:"I’m a web developer and I genuinely enjoy building experiences that feel clean, friendly, and easy to use. I’m motivated by learning, polishing details, and turning ideas into real products.",
+                desc2:"I currently work at Simetra, helping build internal tools for site operations and documentation: documentation control, QR traceability (with Excel uploads and mobile scanning), and a complex desktop quotation system with roles, states, and automated calculations.",
                 botons:['Contact','Dowload Cv'],
                 cv: cvEnglish,
                 pathName: "cvEnglish"
@@ -406,6 +488,18 @@ export const info = {
                         rate: 4,
                         icon: icon4
                     },{
+                        title:"TypeScript",
+                        rate: 3,
+                        icon: icon22
+                    },{
+                        title:"Next.js",
+                        rate: 3,
+                        icon: icon23
+                    },{
+                        title:"Vite",
+                        rate: 4,
+                        icon: icon24
+                    },{
                         title:"Redux",
                         rate: 4,
                         icon: icon5
@@ -414,9 +508,25 @@ export const info = {
                         rate: 4,
                         icon: icon6
                     },{
+                        title:"FastAPI",
+                        rate: 3,
+                        icon: icon25
+                    },{
                         title:"PostgreSQL",
                         rate: 3,
                         icon: icon7
+                    },{
+                        title:"Supabase",
+                        rate: 4,
+                        icon: icon26
+                    },{
+                        title:"Docker",
+                        rate: 3,
+                        icon: icon27
+                    },{
+                        title:"Tauri",
+                        rate: 2,
+                        icon: icon28
                     },{
                         title:"MySQL",
                         rate: 3,
@@ -462,6 +572,10 @@ export const info = {
                         rate: 5,
                         icon: icon18
                     },{
+                        title:"Cursor",
+                        rate: 4,
+                        icon: icon29
+                    },{
                         title:"Figma",
                         rate: 5,
                         icon: icon19
@@ -481,6 +595,18 @@ export const info = {
                 Title:"Educaction",
                 Certificate: "View Certificate",
                 info: [
+                    {
+                        name: "University Technical Degree in Web Development",
+                        academy:"Faculty of Computer Science - National University of Comahue",
+                        desc: "University program focused on web development. Coursework completed; degree issuance pending (expected in May).",
+                        note: "Degree pending (May)"
+                    },
+                    {
+                        name: "Diploma in Data Science & Artificial Intelligence",
+                        academy:"IFES Educación",
+                        desc: "Diploma (Jan 2024 - Dec 2024). Final project: a neural network model for real-time facial emotion recognition, using face detection (Haar Cascade) and emotion prediction in Python (Google Colab).",
+                        certificate: diplomaturaIA
+                    },
                     {
                         name: "Full Stack Developer",
                         academy:"Soy Henry",
@@ -516,17 +642,42 @@ export const info = {
             More: "Visit Page",
             projects: [
               {
+                title: "QR Management (Quality / Site)",
+                image: gestionQrImg,
+                link: "",
+                private: true,
+                detail:
+                  "Site traceability: bulk upload from Excel, document linking in Supabase, QR generation/printing, and mobile QR scanning. (Private)"
+              },
+              {
+                title: "Documentation Control",
+                image: controlDocumentacionImg,
+                link: "https://control-documentos-sigma.vercel.app/",
+                detail:
+                  "Project-based document management with Supabase (Auth/DB/Storage), issue flow and Excel delivery notes + email sending."
+              },
+              {
+                title: "Commerce System - Quotations",
+                image: sistemaComercioImg,
+                link: "",
+                private: true,
+                detail:
+                  "Desktop app for complex quotations (projects/items/catalogs), automatic cost calculations, and role-based workflow. (Private – internal use)"
+              },
+              {
+                title: "Inventory Control System (Thesis)",
+                image: controlInventarioImg,
+                link: "",
+                private: true,
+                detail:
+                  "Web system to manage products, users/roles, and real-time stock with Next.js + Node.js + PostgreSQL. (Private)"
+              },
+              {
                 title: "SportWear",
                 image: sportwearImg,
                 link: "https://sportwear.vercel.app/",
                 detail: "Online store for sportswear. Main landing page built with React and Tailwind."
               },
-              // {
-              //   title: "Videogames",
-              //   image: videogamesImg,
-              //   link: "https://github.com/katherine-j-c-s/PI_VideoGames",
-              //   detail: "SPA app to search, filter, and create videogames. Built with React and Redux using an external API."
-              // },
               {
                 title: "Los Ángeles Mountains",
                 image: losAngelesImg,

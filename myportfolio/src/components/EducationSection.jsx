@@ -61,12 +61,18 @@ export default function EducationSection({ educationInfo, onOpenCertificate }) {
                       <h4 className="text-xl md:text-2xl text-[#DA0BFF] font-bold">
                         {edu.academy}
                       </h4>
-                      <button
-                        onClick={() => onOpenCertificate(edu.certificate)}
-                        className="text-white bg-transparent border-s-2 border-[#DA0BFF] border-solid hover:text-[#DA0BFF] mt-2 md:mt-0 text-base cursor-pointer hover:underline transition-all"
-                      >
-                        {educationInfo.Certificate}
-                      </button>
+                      {edu.certificate ? (
+                        <button
+                          onClick={() => onOpenCertificate(edu.certificate)}
+                          className="text-white bg-transparent border-s-2 border-[#DA0BFF] border-solid hover:text-[#DA0BFF] mt-2 md:mt-0 text-base cursor-pointer hover:underline transition-all"
+                        >
+                          {educationInfo.Certificate}
+                        </button>
+                      ) : edu.note ? (
+                        <span className="text-gray-300 mt-2 md:mt-0 text-sm">
+                          {edu.note}
+                        </span>
+                      ) : null}
                     </div>
                     <p className="mt-4 text-base md:text-lg">{edu.desc}</p>
                   </motion.div>

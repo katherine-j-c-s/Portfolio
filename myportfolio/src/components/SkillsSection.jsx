@@ -5,9 +5,17 @@ import {Appear} from "./Appear"
 // Star icons for skill ratings
 import starEmpty from '../assets/starEmpti.png';
 import start from '../assets/star.png';
+import defaultSkillIcon from '../assets/world-wide-web.png';
 
 export default function SkillsSection({ skillsInfo }) {
   const [showSkillDetail, setShowSkillDetail] = useState(null);
+
+  const resolveIconSrc = (icon) => {
+    if (!icon) return defaultSkillIcon;
+    if (typeof icon === 'string') return icon;
+    if (typeof icon === 'object' && typeof icon.default === 'string') return icon.default;
+    return defaultSkillIcon;
+  };
   
   // Manejador para mostrar detalles de habilidad
   const handleSkillDetail = (skill) => {
@@ -56,10 +64,15 @@ export default function SkillsSection({ skillsInfo }) {
             variants={skillIconVariants}
           >
             <div className="p-4 flex flex-col items-center">
-              <motion.img 
+              <img 
                 className="h-12 w-12 mb-2" 
-                src={item.icon} 
+                src={resolveIconSrc(item.icon)}
                 alt={item.title} 
+                loading="lazy"
+                onError={(e) => {
+                  e.currentTarget.onerror = null;
+                  e.currentTarget.src = defaultSkillIcon;
+                }}
               />
               <p className="text-sm font-medium">{item.title}</p>
               <Appear>
